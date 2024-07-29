@@ -1,0 +1,193 @@
+.pageContainer {
+  background-color: #0c203a;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+.contentContainer {
+  background-color: #102138;
+  color: #e5e7eb;
+  font-family: Arial, sans-serif;
+  padding: 2rem;
+  max-width: 800px;
+  width: 100%;
+  justify-content: justify;
+}
+
+.contentContainer header {
+  margin-bottom: 2rem;
+}
+
+.contentContainer h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.contentContainer nav a {
+  color: #60a5fa;
+}
+
+.contentContainer p {
+  text-align: justify;
+}
+
+.navLinks {
+  display: flex;
+  gap: 4rem; /* Adjust the gap value as needed */
+}
+
+.navLinks a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.pageContainer {
+  padding: 20px;
+  background-color: #0c203a;
+}
+
+.contentContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #0c203a;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  margin-bottom: 20px;
+}
+
+.navLinks {
+  display: flex;
+  gap: 1rem;
+}
+
+.navLink {
+  text-decoration: none;
+  color: #0070f3;
+  margin-right: 1rem;
+}
+
+.navLink:hover {
+  text-decoration: underline;
+}
+
+.main {
+  padding: 20px 0;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #150303;
+  border-radius: 4px;
+  color: #150303;
+}
+
+.button {
+  padding: 10px 20px;
+  background-color: #0070f3;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #005bb5;
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.editButton,
+.deleteButton {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.editButton {
+  background-color: #0070f3;
+  color: #fff;
+}
+
+.deleteButton {
+  background-color: #e53e3e;
+  color: #fff;
+}
+
+.editButton:hover {
+  background-color: #005bb5;
+}
+
+.deleteButton:hover {
+  background-color: #c53030;
+}
+
+/* Example CSS for Markdown */
+.markdown-body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+}
+
+.markdown-body p {
+  margin-bottom: 1em;
+}
+
+.markdown-body blockquote {
+  padding: 0.5em 1em;
+  margin: 0 0 1em;
+  border-left: 0.25em solid #dfe2e5;
+  color: #6a737d;
+  background: #f5f5f5;
+}
+
+.markdown-body code {
+  background: #f5f5f5;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+}
+
+.markdown-body pre {
+  background: #f5f5f5;
+  padding: 1em;
+  border-radius: 3px;
+  overflow: auto;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}

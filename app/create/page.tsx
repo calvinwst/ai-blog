@@ -66,7 +66,7 @@ export default function CreateBlog() {
     <div className={style.pageContainer}>
       <div className={style.contentContainer}>
         <header>
-          <h1>Calvin's Blog</h1>
+          <h1>Calvin&apos;s Blog</h1>
           <nav className="navLinks">
             <Link
               href="/"

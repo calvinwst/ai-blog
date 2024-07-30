@@ -20,7 +20,7 @@ export default function Home() {
     <div className={styles.pageContainer}>
       <div className={styles.contentContainer}>
         <header>
-          <h1>Calvin's Blog</h1>
+          <h1>Calvin&apos;s Blog</h1>
           <nav className="navLinks">
             <Link href="/" style={{ marginRight: "1rem" }}>
               Home
@@ -49,14 +49,14 @@ export default function Home() {
         </header>
         <main>
           <p>
-            Hey I'm Calvin Wong, a recent Computer Science graduate from
+            Hey I&apos;m Calvin Wong, a recent Computer Science graduate from
             Technological University of Shannon. Currently in the process of
             finding a job in the tech industry.
           </p>
           <br />
           <p>
             I have passion for building things and learning new technologies. In
-            the mid of learning LLM model and building some RAG application. I'm
+            the mid of learning LLM model and building some RAG application. I&apos;m
             always looking for open-minded people to connect with and learning
             from each other about.
           </p>
@@ -68,11 +68,11 @@ export default function Home() {
             </li>
             <li>- I love to read books especially non-fiction 📚</li>
             <li>- I run currently training to run for a half marathon 👟</li>
-            <li>- I'm a huge Manchester United Fan 👹</li>
+            <li>- I&apos;m a huge Manchester United Fan 👹</li>
           </ul>
           <br />
           <p>
-            I'm building this blog to share my journey in tech and also in life
+            I&apos;m building this blog to share my journey in tech and also in life
             in general by sharing my experience and perspective. By doing this I
             hope that it enables me to have the opportunity to better my
             perspective on certain subjects and connect with other people along

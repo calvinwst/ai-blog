@@ -47,7 +47,7 @@ export default function BlogList() {
       <div className={styles.pageContainer}>
         <div className={styles.contentContainer}>
           <header>
-            <h1>Calvin's Blog</h1>
+            <h1>Calvin&apos;s Blog</h1>
             <nav className="navLinks">
               <Link
                 href="/"

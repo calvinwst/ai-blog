@@ -2,15 +2,12 @@
 
 import { useState, useEffect } from "react";
 import { useParams, useRouter } from "next/navigation";
-
 import { supabase } from "../../../lib/supabaseClient";
+import useAuth from "../../../lib/auth"; // Ensure the import path is correct
 import style from "../../../app/styles/Home.module.css";
 import Link from "next/link";
-import axios from "axios";
-import ReactMarkDown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import ReactMarkdown from "react-markdown";
-import useAuth from "../../../lib/auth"; // Ensure the import path is correct
 
 interface Post {
   id: number;
@@ -21,7 +18,7 @@ interface Post {
 }
 
 export default function Post() {
-  const { slug } = useParams<{ slug: string }>();
+  const { slug } = useParams<{ slug: string }>() || { slug: "" };
   const router = useRouter();
   const [post, setPost] = useState<Post | null>(null);
   const [loading, setLoading] = useState(true);
@@ -82,7 +79,7 @@ export default function Post() {
     <div className={style.pageContainer}>
       <div className={style.contentContainer}>
         <header>
-          <h1>Calvin's Blog</h1>
+          <h1>Calvin&apos;s Blog</h1>
           <nav className="navLinks">
             <Link
               href="/"
@@ -127,6 +124,7 @@ export default function Post() {
         <main className={style.main}>
           <h1>{post.title}</h1>
           <p>{new Date(post.created_at).toLocaleDateString()}</p>
+          <br />
           <ReactMarkdown
             className={style.markdownBody}
             remarkPlugins={[remarkGfm]}

@@ -12,20 +12,32 @@ const useAuth = () => {
 
   useEffect(() => {
     const fetchUser = async () => {
-      const {
-        data: { user },
-      } = await supabase.auth.getUser();
-      console.log("user>>> this is ", user);
-      console.log("this is the user email >>>", user?.email);
-      setUser(user);
-      setUserEmail(user?.email ?? null);
-      setLoading(false);
+      try {
+        const {
+          data: { user },
+          error,
+        } = await supabase.auth.getUser();
+
+        if (error) throw error;
+
+        console.log("user>>> this is ", user);
+        console.log("this is the user email >>>", user?.email);
+        setUser(user);
+        setUserEmail(user?.email ?? null);
+      } catch (error) {
+        console.log("this is the error", error);
+      } finally {
+        console.log("this is the finally block");
+        setLoading(false);
+      }
     };
 
     fetchUser();
 
     const { data: authListener } = supabase.auth.onAuthStateChange(
       async (event, session) => {
+        console.log("this is the event", event);
+        console.log("this is the session", session);
         setUser(session?.user ?? null);
         setUserEmail(session?.user?.email ?? null);
         setLoading(false);

@@ -49,16 +49,16 @@ export default function Home() {
         </header>
         <main>
           <p>
-            Hey I&apos;m Calvin Wong, a recent Computer Science graduate from
-            Technological University of Shannon. Currently in the process of
-            finding a job in the tech industry.
+            Hey I&apos;m Calvin Wong from Malaysia, a recent Computer Science
+            graduate from Technological University of Shannon. Currently in the
+            process of finding a job in the tech industry in Ireland.
           </p>
           <br />
           <p>
             I have passion for building things and learning new technologies. In
-            the mid of learning LLM model and building some RAG application. I&apos;m
-            always looking for open-minded people to connect with and learning
-            from each other about.
+            the mid of learning LLM model and building some RAG application.
+            I&apos;m always looking for open-minded people to connect with and
+            learning from each other about.
           </p>
           <br />
           <p>Some facts about me:</p>
@@ -72,9 +72,9 @@ export default function Home() {
           </ul>
           <br />
           <p>
-            I&apos;m building this blog to share my journey in tech and also in life
-            in general by sharing my experience and perspective. By doing this I
-            hope that it enables me to have the opportunity to better my
+            I&apos;m building this blog to share my journey in tech and also in
+            life in general by sharing my experience and perspective. By doing
+            this I hope that it enables me to have the opportunity to better my
             perspective on certain subjects and connect with other people along
             the way. I hope you enjoy reading my blog.
           </p>

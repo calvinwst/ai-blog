@@ -59,14 +59,6 @@ export default function Login() {
               >
                 Blog
               </Link>
-              {/* <Link
-                href="/create"
-                style={{
-                  marginRight: "1rem",
-                }}
-              >
-                Create Blog
-              </Link> */}
               <Link href="/login">Login</Link>
             </nav>
           </header>

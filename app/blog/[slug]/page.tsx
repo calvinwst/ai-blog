@@ -8,6 +8,7 @@ import style from "../../../app/styles/Home.module.css";
 import Link from "next/link";
 import remarkGfm from "remark-gfm";
 import ReactMarkdown from "react-markdown";
+import ChatBot from "../../components/ChatBot";
 
 interface Post {
   id: number;
@@ -146,6 +147,7 @@ export default function Post() {
         ) : (
           <></>
         )}
+        <ChatBot />
       </div>
     </div>
   );

@@ -20,7 +20,10 @@ export default function BlogList() {
 
   useEffect(() => {
     const fetchBlogs = async () => {
-      const { data, error } = await supabase.from("posts").select("*");
+      const { data, error } = await supabase
+        .from("posts")
+        .select("*")
+        .order("created_at", { ascending: false });
       if (error) {
         console.log("this is the error", error);
       } else {
@@ -80,17 +83,21 @@ export default function BlogList() {
             </nav>
           </header>
           <main>
-            <ul>
-              {blogs.map((blog) => {
-                const date = extractDate(blog.created_at);
-                return (
-                  <li key={blog.id}>
-                    <span>{date}</span> -{" "}
-                    <Link href={`/blog/${blog.slug}`}>{blog.title}</Link>
-                  </li>
-                );
-              })}
-            </ul>
+            {blogs.length == 0 ? (
+              <div>No blogs available!!</div>
+            ) : (
+              <ul>
+                {blogs.map((blog) => {
+                  const date = extractDate(blog.created_at);
+                  return (
+                    <li key={blog.id}>
+                      <span>{date}</span> -{" "}
+                      <Link href={`/blog/${blog.slug}`}>{blog.title}</Link>
+                    </li>
+                  );
+                })}
+              </ul>
+            )}
           </main>
         </div>
       </div>

@@ -21,7 +21,7 @@ interface Post {
 }
 
 export default function Post() {
-  const { slug } = useParams<{ slug: string }>();
+  const { slug } = useParams<{ slug: string }>() || { slug: "" };
   const router = useRouter();
   const [post, setPost] = useState<Post | null>(null);
   const [loading, setLoading] = useState(true);
@@ -82,7 +82,7 @@ export default function Post() {
     <div className={style.pageContainer}>
       <div className={style.contentContainer}>
         <header>
-          <h1>Calvin's Blog</h1>
+          <h1>Calvin&apos;s Blog</h1>
           <nav className="navLinks">
             <Link
               href="/"

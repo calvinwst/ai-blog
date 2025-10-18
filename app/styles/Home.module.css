@@ -191,3 +191,168 @@
   border: 1px solid #ddd;
   padding: 8px;
 }
+
+.chatButton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #0070f3;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 20px;
+  cursor: not-allowed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.tooltip {
+  visibility: hidden;
+  width: 100px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%; /* Position the tooltip above the button */
+  left: 20%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size:small;
+}
+
+.chatButton:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+.chatModal {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 300px;
+  max-height: 1000px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.chatHeader {
+  padding: 10px;
+  background-color: #0070f3;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.suggestionInput {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* .suggestionContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.suggestionBubble {
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+} */
+
+.chatBody {
+  padding: 10px;
+  overflow-y: auto;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.chatFooter {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.chatInput {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: #333;
+}
+
+.sendButton {
+  background-color: #0070f3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 12px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.userMessage {
+  text-align: right;
+  margin: 5px 0;
+}
+
+.botMessage {
+  text-align: left;
+  margin: 5px 0;
+}
+
+.chatBot {
+  background-color: #f5f5f5;
+  padding: 10px;
+  border-radius: 4px;
+  margin: 5px 0;
+}
+
+.messageBubble {
+  padding: 10px 15px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  max-width: 75%;
+}
+
+.userBubble {
+  background-color: #0070f3;
+  color: #fff;
+  align-self: flex-end;
+}
+
+.botBubble {
+  background-color: #545458;
+  color: #fff;
+  align-self: flex-start;
+}

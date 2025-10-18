@@ -2,15 +2,13 @@
 
 import { useState, useEffect } from "react";
 import { useParams, useRouter } from "next/navigation";
-
 import { supabase } from "../../../lib/supabaseClient";
+import useAuth from "../../../lib/auth"; // Ensure the import path is correct
 import style from "../../../app/styles/Home.module.css";
 import Link from "next/link";
-import axios from "axios";
-import ReactMarkDown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import ReactMarkdown from "react-markdown";
-import useAuth from "../../../lib/auth"; // Ensure the import path is correct
+import ChatBot from "../../components/ChatBot";
 
 interface Post {
   id: number;
@@ -127,6 +125,7 @@ export default function Post() {
         <main className={style.main}>
           <h1>{post.title}</h1>
           <p>{new Date(post.created_at).toLocaleDateString()}</p>
+          <br />
           <ReactMarkdown
             className={style.markdownBody}
             remarkPlugins={[remarkGfm]}
@@ -148,6 +147,7 @@ export default function Post() {
         ) : (
           <></>
         )}
+        <ChatBot />
       </div>
     </div>
   );

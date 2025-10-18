@@ -22,6 +22,8 @@ export default function CreateBlog() {
   const { user, loading: authLoading, userEmail } = useAuth();
   const router = useRouter();
 
+  const NEXT_Admin_EMAIL = process.env.NEXT_ADMIN_EMAIL;
+
   const addDashInSlug = (str: string) => {
     return str.toLowerCase().replace(/\s+/g, "-");
   };
@@ -84,7 +86,7 @@ export default function CreateBlog() {
             >
               Blog
             </Link>
-            {userEmail === "calshtz02@gmail.com" ? (
+            {userEmail === NEXT_Admin_EMAIL ? (
               <>
                 <Link
                   href="/create"

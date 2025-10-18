@@ -16,6 +16,8 @@ export default function Home() {
     }
   };
 
+  const NEXT_Admin_EMAIL = process.env.NEXT_ADMIN_EMAIL;
+
   return (
     <div className={styles.pageContainer}>
       <div className={styles.contentContainer}>
@@ -28,7 +30,7 @@ export default function Home() {
             <Link href="/bloglist" style={{ marginRight: "1rem" }}>
               Blog
             </Link>
-            {userEmail === "calshtz02@gmail.com" ? (
+            {userEmail === "NEXT_Admin_EMAIL" ? (
               <>
                 <Link href="/create" style={{ marginRight: "1rem" }}>
                   Create Blog

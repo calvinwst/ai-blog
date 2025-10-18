@@ -10,6 +10,7 @@ export default function BlogList() {
   const [loading, setLoading] = useState(true);
 
   const { user, loading: authLoading, userEmail } = useAuth();
+  const NEXT_Admin_EMAIL = process.env.NEXT_ADMIN_EMAIL;
 
   const handleSignOut = async () => {
     const { error } = await supabase.auth.signOut();
@@ -65,7 +66,7 @@ export default function BlogList() {
               >
                 Blog
               </Link>
-              {userEmail === "calshtz02@gmail.com" ? (
+              {userEmail === "NEXT_Admin_EMAIL" ? (
                 <>
                   <Link href="/create" style={{ marginRight: "1rem" }}>
                     Create Blog
